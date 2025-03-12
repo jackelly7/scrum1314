@@ -1,0 +1,36 @@
+# Node.js dependencies
+frontend/node_modules/
+
+# ASP.NET build files
+backend/Scrum1314/Scrum1314/bin/
+backend/Scrum1314/Scrum1314/obj/
+
+# MacOS system files
+.DS_Store
+__MACOSX/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+*.env
+frontend/.env.local
+
+# Compiled files
+backend/Scrum1314/Scrum1314/wwwroot/
+
+# IDE/editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln*
+*.csproj.user
+
+# Coverage and test results
+coverage/
+test-results/
