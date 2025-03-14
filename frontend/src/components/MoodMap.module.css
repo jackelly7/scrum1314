@@ -1,0 +1,37 @@
+.moodMap {
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  box-shadow: 0 4px 4px #00000040;
+}
+
+.content {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  padding-left: 36px;
+  padding-right: 36px;
+  display: flex;
+}
+
+.title {
+  color: #367ba1;
+  text-align: center;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.separator {
+  border: 1px solid #000;
+  width: 306px;
+  max-width: 100%;
+  height: 3px;
+  margin-top: 14px;
+}
