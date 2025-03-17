@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "vite-plugin-css-modules": "^0.0.1"
+  }
+}
