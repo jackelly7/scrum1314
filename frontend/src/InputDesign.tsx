@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./InputDesign.module.css";
 import StatusBar from "./StatusBar";
 import GoalForm from "./GoalForm";
-import BottomNavigation from "./BottomNavigation";
+import BottomNavigation from "./BottomNavigation.tsx";
 
 function InputDesign() {
   return (
