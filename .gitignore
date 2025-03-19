@@ -28,7 +28,6 @@ backend/Scrum1314/Scrum1314/wwwroot/
 *.suo
 *.ntvs*
 *.njsproj
-*.sln*
 *.csproj.user
 
 # Coverage and test results
