@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+
+/* this is for the log in page
+/* src/App.css or another CSS file */
+/* .center {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 10px; 
+
+
+@media (max-width: 600px) {
+  .center {
+    flex-direction: column; 
+    justify-content: flex-start; 
+    padding: 15px; 
+  }
+} */
