@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
-import { TaskItem } from './TaskItem';
-import { ActionButton } from './ActionButton';
-import { WeeklyLayout } from './WeeklyLayout';
+import { TaskItem } from './HomeTaskItem';
+import { ActionButton } from './HomeActionButton';
+import { WeeklyLayout } from './HomeWeeklyLayout';
 import styles from '../styles/HomePage.module.css';
 
 export const HomePage: FC = () => {
