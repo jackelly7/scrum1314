@@ -1,6 +1,8 @@
 // src/pages/LoginPage.tsx
 import React, { useState } from 'react';
 
+// import Footer from './Footer';
+
 const LoginPage: React.FC = () => {
   // State variables to store email and password
   const [email, setEmail] = useState('');
