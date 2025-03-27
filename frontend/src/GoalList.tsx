@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import React from 'react'; // Import React
 
 // Importing images correctly
@@ -9,8 +9,16 @@ import pray from "./assets/pray.jpg";
 import readScriptures from "./assets/readScriptures.jpg";
 
 function GoalDescription() {
-    const [goals, setGoals] = useState<string[]>([]);
     const [selectedGoal, setSelectedGoal] = useState<string>("");
+
+    // Hardcoded goals
+    const goals = [
+        "Go to the gym for 60 minutes",
+        "Make my bed",
+        "Don't eat sugar",
+        "Read my scriptures",
+        "Say my prayers"
+    ];
 
     // Hardcoded images for each goal
     const goalImages: Record<string, string> = {
@@ -20,20 +28,6 @@ function GoalDescription() {
         "Read my scriptures": readScriptures,
         "Say my prayers": pray,
     };
-
-    useEffect(() => {
-        const fetchGoals = async () => {
-            try {
-                const response = await fetch('https://localhost:5000/Scrum/GetGoals');
-                const data = await response.json();
-                setGoals(data);
-            } catch (error) {
-                console.error("Error fetching goals", error);
-            }
-        };
-
-        fetchGoals();
-    }, []);
 
     return (
         <div style={styles.container}>
@@ -69,13 +63,13 @@ const styles: Record<string, React.CSSProperties> = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "flex-start", // Change to flex-start to allow the image to take full height
-        minHeight: "100vh", // Ensure the container takes at least the full viewport height
-        width: "100%", // Take up the full width
+        justifyContent: "center", // Center content vertically
+        minHeight: "100vh",
+        width: "100%",
         textAlign: "center",
-        backgroundColor: "#ffffff", // White background
-        color: "#000000", // Black text
-        paddingTop: "20px", // Add some padding at the top if needed
+        backgroundColor: "#ffffff",
+        color: "#000000",
+        paddingTop: "20px",
     },
     heading: {
         fontSize: "2rem",
@@ -93,10 +87,10 @@ const styles: Record<string, React.CSSProperties> = {
         color: "#000000",
     },
     goalContainer: {
-        width: "100%", // Make the container take full width
-        maxWidth: "none", // Remove the max width
+        width: "100%",
+        maxWidth: "600px", // Adjusted to prevent image from stretching too much
         textAlign: "center",
-        display: "flex", // Use flexbox to center the image
+        display: "flex",
         flexDirection: "column",
         alignItems: "center",
     },
@@ -106,12 +100,12 @@ const styles: Record<string, React.CSSProperties> = {
         color: "#000000",
     },
     image: {
-        width: "100%", // Make the image take full width of its container
-        height: "auto", // Maintain aspect ratio
-        maxHeight: "none", // Remove the max height constraint
-        objectFit: "contain", // Or 'cover' depending on how you want it to fill
-        borderRadius: "0px", // No rounded corners
-        boxShadow: "none", // No shadow
+        width: "100%",
+        maxWidth: "500px", // Keeps the image at a reasonable size
+        height: "auto",
+        objectFit: "contain",
+        borderRadius: "0px",
+        boxShadow: "none",
     },
 };
 
