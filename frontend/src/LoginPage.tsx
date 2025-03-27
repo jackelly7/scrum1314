@@ -1,5 +1,6 @@
 // src/pages/LoginPage.tsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // import Footer from './Footer';
 
@@ -8,6 +9,7 @@ const LoginPage: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
@@ -73,6 +75,7 @@ const LoginPage: React.FC = () => {
           <button
             type="submit"
             className="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            onClick={() => navigate('/home')}
           >
             Login
           </button>

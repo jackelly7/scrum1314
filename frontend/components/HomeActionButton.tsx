@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import styles from '../styles/HomePage.module.css';
+import styles from '../src/styles/HomePage.module.css';
 
 interface ActionButtonProps {
   children: ReactNode;

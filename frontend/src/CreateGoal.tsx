@@ -1,7 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import styles from './InputDesign.module.css';
+import { useNavigate } from 'react-router-dom';
 const GoalForm: React.FC = () => {
+  const navigate = useNavigate();
   const [goalText, setGoalText] = useState('');
   const [goalDate, setGoalDate] = useState('');
   const handleSubmit = (e: React.FormEvent) => {
@@ -62,7 +64,11 @@ const GoalForm: React.FC = () => {
       </button>
       <br />
       <br />
-      <button type="submit" className={styles.submitButton}>
+      <button
+        onClick={() => navigate('/home')}
+        type="submit"
+        className={styles.submitButton}
+      >
         Create Goal
       </button>
     </form>
