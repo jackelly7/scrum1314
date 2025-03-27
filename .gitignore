@@ -34,3 +34,5 @@ backend/Scrum1314/Scrum1314/wwwroot/
 # Coverage and test results
 coverage/
 test-results/
+
+.vs/
