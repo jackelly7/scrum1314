@@ -6,7 +6,7 @@ function App() {
     <>
       <FriendsPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
