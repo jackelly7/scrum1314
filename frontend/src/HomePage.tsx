@@ -2,9 +2,12 @@ import { FC, useState } from 'react';
 import { TaskItem } from '../components/HomeTaskItem';
 import { ActionButton } from '../components/HomeActionButton';
 import { WeeklyLayout } from '../components/HomeWeeklyLayout';
-import styles from '../styles/HomePage.module.css';
+import styles from './styles/HomePage.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export const HomePage: FC = () => {
+  const navigate = useNavigate();
+
   const [tasks, setTasks] = useState<Task[]>([
     { id: 1, label: 'Read my scriptures', count: 28, checked: false },
     { id: 2, label: 'Exercise for 30 minutes', count: 2, checked: false },
@@ -37,9 +40,15 @@ export const HomePage: FC = () => {
         </div>
 
         <div className={styles.actions}>
-          <ActionButton>Create Goal</ActionButton>
-          <ActionButton>Edit Goals</ActionButton>
-          <ActionButton>Past Goals</ActionButton>
+          <ActionButton onClick={() => navigate('/createGoal')}>
+            Create Goal
+          </ActionButton>
+          <ActionButton onClick={() => navigate('/createGoal')}>
+            Edit Goals
+          </ActionButton>
+          <ActionButton onClick={() => navigate('/stats')}>
+            Past Goals
+          </ActionButton>
         </div>
 
         <WeeklyLayout />

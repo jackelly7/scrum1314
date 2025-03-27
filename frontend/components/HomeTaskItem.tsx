@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from '../styles/HomePage.module.css';
+import styles from '../src/styles/HomePage.module.css';
 
 interface TaskItemProps {
   label: string;
