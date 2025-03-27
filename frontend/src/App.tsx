@@ -1,12 +1,8 @@
-import './App.css'
-import FriendsPage from "../components/FriendsPage"
-function App() {
+import { HomePage } from './components/HomePage';
+import './App.css';
 
-  return (
-    <>
-      <FriendsPage />
-    </>
-  );
+function App() {
+  return <HomePage />;
 }
 
 export default App;
