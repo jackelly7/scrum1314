@@ -23,4 +23,10 @@
     "noUncheckedSideEffectImports": true
   },
   "include": ["src", "types"]
+  "include": [
+    "src",
+    "components/HomeActionButton.tsx",
+    "components/HomeTaskItem.tsx",
+    "components/HomeWeeklyLayout.tsx"
+  ]
 }
