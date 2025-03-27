@@ -15,5 +15,14 @@ namespace Scrum1314.Controllers
         {
             _context = temp;
         }
+        [HttpGet("GetGoals")]
+        public IEnumerable<string> GetGoals()
+        {
+            return _context.Goal.Select(g => g.goal_description).ToList();
+        }
     }
+    
+    
+    
 }
+
