@@ -1,10 +1,10 @@
-import './App.css';
-import MoodTracker from './MoodTracker';
-
+import './App.css'
+import FriendsPage from "../components/FriendsPage"
 function App() {
+
   return (
     <>
-      <MoodTracker />
+      <FriendsPage />
     </>
   );
 }
