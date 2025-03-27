@@ -1,7 +1,7 @@
 import GoalList from './GoalList';
 import React from 'react';
 
-function App() {
+function Stats() {
   const styles: Record<string, React.CSSProperties> = {
     container: {
       display: "flex",
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default Stats;
