@@ -1,0 +1,159 @@
+.pageContainer {
+  background-color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Inter, sans-serif;
+  position: relative;
+}
+
+.searchContainer {
+  background-color: #e8f1f8;
+  border-radius: 20px;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  display: flex;
+}
+
+.searchIcon {
+  color: #8e8e8e;
+  font-size: 20px;
+}
+
+.sectionTitle {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.friendsList {
+  flex-direction: column;
+  gap: 15px;
+  display: flex;
+}
+
+.friendCard {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  display: flex;
+}
+
+.friendInfo {
+  align-items: center;
+  gap: 15px;
+  display: flex;
+}
+
+.profilePic {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.friendDetails {
+  flex-direction: column;
+  gap: 5px;
+  display: flex;
+}
+
+.friendName {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.taskInfo {
+  color: #333;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  display: flex;
+}
+
+.flameIcon {
+  color: #ff6b6b;
+  margin: 0 5px;
+}
+
+.addFriendsSection {
+  margin-top: 30px;
+}
+
+.addFriendsList {
+  flex-direction: column;
+  gap: 15px;
+  display: flex;
+}
+
+.addFriendCard {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  display: flex;
+}
+
+.suggestedFriendName {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.addButton {
+  color: #fff;
+  cursor: pointer;
+  background-color: #0084ff;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  display: flex;
+}
+
+.bottomNav {
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  justify-content: space-around;
+  padding: 15px 0;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.navButton {
+  color: #666;
+  cursor: pointer;
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  display: flex;
+}
+
+@media (max-width: 640px) {
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .friendName,
+  .suggestedFriendName {
+    font-size: 14px;
+  }
+
+  .taskInfo {
+    font-size: 12px;
+  }
+
+  .bottomNav {
+    padding: 10px 0;
+  }
+
+  .navButton {
+    font-size: 20px;
+  }
+}
