@@ -6,6 +6,7 @@ namespace Scrum1314.Data
     public class Goal
     {
         [Key]
+        [Required]
         public int goal_id { get; set; }
 
         [Required]
@@ -20,16 +21,16 @@ namespace Scrum1314.Data
         public virtual Goal_Frequency? Goal_Frequency { get; set; }
 
         [Required]
-        public string goal_start_date { get; set; }
+        public string? goal_start_date { get; set; }
 
         [Required]
-        public string goal_end_date { get; set; }
+        public string? goal_end_date { get; set; }
 
         [Required]
-        public int goal_notification { get; set; }
+        public int? goal_notification { get; set; }
 
         [Required]
-        public int goal_share { get; set; }
+        public int? goal_share { get; set; }
 
         [ForeignKey(nameof(Goal_Status))]
         [Required]
@@ -37,7 +38,7 @@ namespace Scrum1314.Data
         public virtual Goal_Status? Goal_Status { get; set; }
 
         [Required]
-        public int goal_streak_length { get; set; }
+        public int? goal_streak_length { get; set; }
 
         [ForeignKey(nameof(User))]
         [Required]
