@@ -1,0 +1,52 @@
+/* MoodTracker.css */
+
+.mood-tracker-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mood-tracker-container h2,
+.mood-tracker-container h3 {
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+}
+
+.mood-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.mood-buttons button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.mood-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+.past-moods {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.past-moods li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.bubble-chart {
+  margin: 1rem 0;
+}
