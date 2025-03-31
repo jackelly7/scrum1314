@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
           <NavIcon
             svgContent={profileIcon}
             className={styles.profileItem}
-            onClick={() => console.log('Profile clicked')}
+            onClick={() => navigate('/social')}
           />
         </div>
       </nav>
