@@ -28,7 +28,7 @@
   color: #002a5c;
 }
 .textInput {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   font-size: 1rem;
   border-radius: 8px;
@@ -84,7 +84,7 @@
   border-color: #002a5c;
 }
 .checkboxGroup input:checked::after {
-  content: ':heavy_check_mark:';
+  content: '✓';
   color: white;
   font-size: 14px;
   font-weight: bold;
@@ -105,4 +105,13 @@
 }
 .submitButton:hover {
   background: #00509e;
+}
+body {
+  background-color: #f0f2f5; /* light neutral background */
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
