@@ -33,33 +33,47 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px;
-  border: 1px solid #e5e7eb;
-  border-radius: 4px;
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fefefe;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: background-color 0.2s ease;
+}
+
+.taskItem:hover {
+  background-color: #f5faff;
 }
 
 .checkbox {
   width: 20px;
   height: 20px;
-  border: 2px solid #d1d5db;
-  border-radius: 4px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
   cursor: pointer;
-  background-color: #f0f0f0;
+  background-color: #f0f4f8;
 }
 
 .taskLabel {
   font-size: 16px;
   flex: 1;
+  font-weight: 500;
 }
 
 .countWrapper {
   display: flex;
   align-items: center;
   gap: 4px;
+  background: #e0f7ec;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2e7d32;
+  font-weight: 600;
 }
 
 .count {
-  font-size: 16px;
+  display: inline-block;
 }
 
 .actions {
@@ -70,13 +84,13 @@
 
 .actionButton {
   width: 100%;
-  padding: 12px 20px;
+  padding: 14px 20px;
   background-color: #2b82bc;
   color: #ffffff;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -98,6 +112,13 @@
   border-top: 2px solid #ccc;
 }
 
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
 .weeklyGrid {
   display: flex;
   justify-content: space-between;
@@ -109,9 +130,16 @@
   flex: 1;
   text-align: center;
   border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 14px;
+  border-radius: 10px;
   background-color: #f9f9f9;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.currentDay {
+  border: 2px solid #2b82bc;
+  background-color: #e6f7ff;
 }
 
 .weeklyColumn h3 {
@@ -125,4 +153,29 @@
   gap: 8px;
   justify-content: center;
   margin-bottom: 6px;
+}
+
+.goalLabel {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+}
+
+.navButton {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px 12px;
+  color: #2b82bc;
+  transition: color 0.2s;
+}
+
+.navButton:hover {
+  color: #1e5e88;
+}
+
+.bullet {
+  color: #2b82bc;
+  font-size: 18px;
 }
