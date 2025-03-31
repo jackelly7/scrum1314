@@ -12,13 +12,25 @@ const daysOfWeek = [
 ];
 
 const weeklyGoals: Record<string, string[]> = {
-  Monday: ['Goal 1', 'Goal 2'],
-  Tuesday: ['Goal 3'],
-  Wednesday: ['Goal 4'],
-  Thursday: ['Goal 5', 'Goal 6'],
-  Friday: ['Goal 7'],
-  Saturday: ['Goal 8', 'Goal 9'],
-  Sunday: ['Goal 10'],
+  Monday: ['🏋️ Gym', '🛏️ Make Bed', '🚫 No Sugar', '📖 Scriptures', '🙏 Pray'],
+  Tuesday: ['🛏️ Make Bed', '🚫 No Sugar', '📖 Scriptures', '🙏 Pray'],
+  Wednesday: [
+    '🏋️ Gym',
+    '🛏️ Make Bed',
+    '🚫 No Sugar',
+    '📖 Scriptures',
+    '🙏 Pray',
+  ],
+  Thursday: ['🛏️ Make Bed', '🚫 No Sugar', '📖 Scriptures', '🙏 Pray'],
+  Friday: ['🏋️ Gym', '🛏️ Make Bed', '🚫 No Sugar', '📖 Scriptures', '🙏 Pray'],
+  Saturday: [
+    '🏋️ Gym',
+    '🛏️ Make Bed',
+    '🚫 No Sugar',
+    '📖 Scriptures',
+    '🙏 Pray',
+  ],
+  Sunday: ['🛏️ Make Bed', '🚫 No Sugar', '📖 Scriptures', '🙏 Pray'],
 };
 
 export const WeeklyLayout: FC = () => {
@@ -35,6 +47,8 @@ export const WeeklyLayout: FC = () => {
   };
 
   const currentDay = daysOfWeek[currentIndex];
+  const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+  const isToday = currentDay === today;
 
   return (
     <div className={styles.weeklyLayout}>
@@ -43,12 +57,18 @@ export const WeeklyLayout: FC = () => {
         <button onClick={prevDay} className={styles.navButton}>
           ❮
         </button>
-        <div className={styles.weeklyColumn}>
+        <div
+          className={
+            isToday
+              ? `${styles.weeklyColumn} ${styles.currentDay}`
+              : styles.weeklyColumn
+          }
+        >
           <h3>{currentDay}</h3>
           {weeklyGoals[currentDay]?.map((goal, index) => (
             <div key={index} className={styles.weeklyGoal}>
-              <input type="checkbox" />
-              <label>{goal}</label>
+              <span className={styles.bullet}>•</span>
+              <label className={styles.goalLabel}>{goal}</label>
             </div>
           ))}
         </div>

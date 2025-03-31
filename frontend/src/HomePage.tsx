@@ -9,11 +9,11 @@ export const HomePage: FC = () => {
   const navigate = useNavigate();
 
   const [tasks, setTasks] = useState<Task[]>([
-    { id: 1, label: 'Read my scriptures', count: 28, checked: false },
-    { id: 2, label: 'Exercise for 30 minutes', count: 2, checked: false },
-    { id: 3, label: 'Say hi to 5 people', count: 6, checked: false },
-    { id: 4, label: 'Eat one extra vegetable', count: 4, checked: false },
-    { id: 5, label: 'Say my prayers', count: 82, checked: false },
+    { id: 1, label: 'Go to gym for 60 minutes', count: 0, checked: false },
+    { id: 2, label: 'Make my bed', count: 11, checked: true },
+    { id: 3, label: "Don't eat sugar", count: 0, checked: false },
+    { id: 4, label: 'Read my scriptures', count: 3, checked: false },
+    { id: 5, label: 'Say my prayers', count: 4, checked: false },
   ]);
 
   const handleTaskCheck = (id: number, checked: boolean) => {

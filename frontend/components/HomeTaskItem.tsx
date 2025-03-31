@@ -24,7 +24,7 @@ export const TaskItem: FC<TaskItemProps> = ({
       />
       <span className={styles.taskLabel}>{label}</span>
       <div className={styles.countWrapper}>
-        <span className={styles.count}>{count}</span>
+        <span className={styles.count}>🔥 {count}</span>
       </div>
     </div>
   );
